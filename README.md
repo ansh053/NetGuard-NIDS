@@ -96,8 +96,8 @@ streamlit run app.py
 Streamlit will host the application locally and automatically open a tab in your default web browser (usually at http://localhost:8501).
 
 ## 📊 Expected Terminal Logging Outputs
+
 During python train.py:
-Plaintext
 🌱 Random seed set to: 42
 📥 Loading dataset from KDDTrain+.txt...
 📊 Data successfully split. Training shapes: (100777, 122), Test shapes: (25195, 122)
