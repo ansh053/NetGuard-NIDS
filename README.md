@@ -95,7 +95,7 @@ streamlit run app.py
 
 Streamlit will host the application locally and automatically open a tab in your default web browser (usually at http://localhost:8501).
 
-**📊 Expected Terminal Logging Outputs**
+## 📊 Expected Terminal Logging Outputs
 During python train.py:
 Plaintext
 🌱 Random seed set to: 42
@@ -115,7 +115,7 @@ Plaintext
 
 ✅ Training complete. Production model saved successfully at: outputs/nids_model.pkl
 
-**🛡️ Live Dashboard Guide**
+## 🛡️ Live Dashboard Guide
 Inside the Streamlit Web Application interface, you can test the AI limits:
 
 **Simulate a Safe Connection:**
