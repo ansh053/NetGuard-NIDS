@@ -40,19 +40,17 @@ The project framework is cleanly split into three distinct pipeline layers:
 ```
 
 
-🛠️ Complete Step-by-Step Setup Guide
+**🛠️ Complete Step-by-Step Setup Guide**
 Follow these steps exactly to configure your environment and execute the project from a blank slate.
 
 Step 1: Open Your Terminal & Navigate
 Open your Terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and move into your project root folder:
 
-Bash
-cd path/to/your/project-folder
+cd path to your/project-folder
 
 **Step 2: Establish a Virtual Environment (Recommended)**
 Creating an isolated virtual environment prevents dependencies from conflicting with other global software on your computer.
 
-Bash
 # Create the virtual environment named 'nids_env'
 python -m venv nids_env
 
@@ -66,39 +64,38 @@ nids_env\Scripts\activate
 # On macOS / Linux:
 source nids_env/bin/activate
 
-Step 3: Install All Project Dependencies
+**Step 3: Install All Project Dependencies**
 Ensure your requirements.txt is populated with pandas, numpy, scikit-learn, joblib, matplotlib, seaborn, notebook, and streamlit. Then run:
 
-Bash
 pip install --upgrade pip
 pip install -r requirements.txt
 
-Step 4: Verify Dataset Placement
+**Step 4: Verify Dataset Placement**
 Ensure that your raw data file, KDDTrain+.txt, is downloaded and placed directly inside your main project root directory alongside train.py.
 
-🚀 Execution & Operational Guide
+**🚀 Execution & Operational Guide**
 1. (Optional) Run the Notebook Visualizer
 To view data distributions, missing value matrices, or outlier boxplots, spin up your local Jupyter environment:
 
-Bash
 jupyter notebook
+
 Click on network analysis data.ipynb in the opened browser window and run the cells sequentially.
 
 2. Execute the Automated Training Engine
 To process the data pipeline, convert labels, and compile your AI models, type:
 
-Bash
 python train.py
+
 This will create the outputs/ folder and generate your nids_model.pkl and model_features.pkl files.
 
 3. Launch the Streamlit Web UI Application
 Once the training script is complete, launch the live network packet simulation dashboard using:
 
-Bash
 streamlit run app.py
+
 Streamlit will host the application locally and automatically open a tab in your default web browser (usually at http://localhost:8501).
 
-📊 Expected Terminal Logging Outputs
+**📊 Expected Terminal Logging Outputs**
 During python train.py:
 Plaintext
 🌱 Random seed set to: 42
@@ -117,12 +114,15 @@ Plaintext
   Attack (1)       1.00      0.99      0.99     11764
 
 ✅ Training complete. Production model saved successfully at: outputs/nids_model.pkl
-🛡️ Live Dashboard Guide
+
+**🛡️ Live Dashboard Guide**
 Inside the Streamlit Web Application interface, you can test the AI limits:
 
-Simulate a Safe Connection: Set Protocol Type to tcp, Network Service to http, Connection Flag to SF, and leave error sliders down at 0.0. The dashboard will return a 🟢 SYSTEM SECURE confirmation status.
+**Simulate a Safe Connection:**
+Set Protocol Type to tcp, Network Service to http, Connection Flag to SF, and leave error sliders down at 0.0. The dashboard will return a 🟢 SYSTEM SECURE confirmation status.
 
-Simulate a Denial of Service (DoS) Attack: Use the sidebar sliders to push the Connections to same host (count) to maximum, and slide the Host Syn Error Rate (serror_rate) up to 1.0. The model will instantly switch, trigger a flashing 💥 ALERT: DETECTED MALICIOUS NETWORK INTRUSION banner, and display an elevated Intrusion Risk Score.
+**Simulate a Denial of Service (DoS) Attack:**
+Use the sidebar sliders to push the Connections to same host (count) to maximum, and slide the Host Syn Error Rate (serror_rate) up to 1.0. The model will instantly switch, trigger a flashing 💥 ALERT: DETECTED MALICIOUS NETWORK INTRUSION banner, and display an elevated Intrusion Risk Score.
 
 📜 License
 This project is open-source and available under the terms of the MIT License.
