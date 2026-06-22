@@ -44,11 +44,13 @@ The project framework is cleanly split into three distinct pipeline layers:
 Follow these steps exactly to configure your environment and execute the project from a blank slate.
 
 **Step 1: Open Your Terminal & Navigate**
+
 Open your Terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and move into your project root folder:
 
 cd path to your/project-folder
 
 **Step 2: Establish a Virtual Environment (Recommended)**
+
 Creating an isolated virtual environment prevents dependencies from conflicting with other global software on your computer.
 
 # Create the virtual environment named 'nids_env'
@@ -65,12 +67,14 @@ nids_env\Scripts\activate
 source nids_env/bin/activate
 
 **Step 3: Install All Project Dependencies**
+
 Ensure your requirements.txt is populated with pandas, numpy, scikit-learn, joblib, matplotlib, seaborn, notebook, and streamlit. Then run:
 
 pip install --upgrade pip
 pip install -r requirements.txt
 
 **Step 4: Verify Dataset Placement**
+
 Ensure that your raw data file, KDDTrain+.txt, is downloaded and placed directly inside your main project root directory alongside train.py.
 
 ## 🚀 Execution & Operational Guide
@@ -82,6 +86,7 @@ jupyter notebook
 Click on network analysis data.ipynb in the opened browser window and run the cells sequentially.
 
 2. Execute the Automated Training Engine
+
 To process the data pipeline, convert labels, and compile your AI models, type:
 
 python train.py
@@ -89,6 +94,7 @@ python train.py
 This will create the outputs/ folder and generate your nids_model.pkl and model_features.pkl files.
 
 3. Launch the Streamlit Web UI Application
+
 Once the training script is complete, launch the live network packet simulation dashboard using:
 
 streamlit run app.py
@@ -98,31 +104,42 @@ Streamlit will host the application locally and automatically open a tab in your
 ## 📊 Expected Terminal Logging Outputs
 
 During python train.py:
+
 🌱 Random seed set to: 42
+
 📥 Loading dataset from KDDTrain+.txt...
+
 📊 Data successfully split. Training shapes: (100777, 122), Test shapes: (25195, 122)
+
 💾 Feature structural layout saved to: outputs/model_features.pkl
+
 🛡️ Training Random Forest (Trees: 100, Max Depth: 12)...
 
 🧐 Evaluating model performance on validation data...
+
 ✨ Validation Accuracy: 0.9924
 
 📋 Detailed Classification Metrics Report:
-              precision    recall  f1-score   support
 
-  Normal (0)       0.99      1.00      0.99     13431
-  Attack (1)       1.00      0.99      0.99     11764
+                          precision    recall  f1-score   support
+             Normal (0)     0.99        1.00     0.99     13431
+             Attack (1)     1.00        0.99     0.99     11764
+
 
 ✅ Training complete. Production model saved successfully at: outputs/nids_model.pkl
 
 ## 🛡️ Live Dashboard Guide
+
 Inside the Streamlit Web Application interface, you can test the AI limits:
 
 **Simulate a Safe Connection:**
+
 Set Protocol Type to tcp, Network Service to http, Connection Flag to SF, and leave error sliders down at 0.0. The dashboard will return a 🟢 SYSTEM SECURE confirmation status.
 
 **Simulate a Denial of Service (DoS) Attack:**
+
 Use the sidebar sliders to push the Connections to same host (count) to maximum, and slide the Host Syn Error Rate (serror_rate) up to 1.0. The model will instantly switch, trigger a flashing 💥 ALERT: DETECTED MALICIOUS NETWORK INTRUSION banner, and display an elevated Intrusion Risk Score.
 
-📜 License
+## 📜 License
+
 This project is open-source and available under the terms of the MIT License.
