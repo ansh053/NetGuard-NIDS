@@ -37,7 +37,7 @@ The project framework is cleanly split into three distinct pipeline layers:
 ├── model_features.pkl           # Saved mathematical feature column indices 
 ├── nids_model.pkl               # Fully optimized, serialized Random Forest model binary
 └── LICENSE                      # Legal open-source permissions file (NEW)
-
+```
 🛠️ Complete Step-by-Step Setup Guide
 Follow these steps exactly to configure your environment and execute the project from a blank slate.
 
