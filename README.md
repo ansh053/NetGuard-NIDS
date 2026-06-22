@@ -38,6 +38,8 @@ The project framework is cleanly split into three distinct pipeline layers:
 ├── nids_model.pkl               # Fully optimized, serialized Random Forest model binary
 └── LICENSE                      # Legal open-source permissions file (NEW)
 ```
+
+
 🛠️ Complete Step-by-Step Setup Guide
 Follow these steps exactly to configure your environment and execute the project from a blank slate.
 
