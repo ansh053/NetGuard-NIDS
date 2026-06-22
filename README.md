@@ -40,10 +40,10 @@ The project framework is cleanly split into three distinct pipeline layers:
 ```
 
 
-**🛠️ Complete Step-by-Step Setup Guide**
+## 🛠️ Complete Step-by-Step Setup Guide
 Follow these steps exactly to configure your environment and execute the project from a blank slate.
 
-Step 1: Open Your Terminal & Navigate
+**Step 1: Open Your Terminal & Navigate**
 Open your Terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and move into your project root folder:
 
 cd path to your/project-folder
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 **Step 4: Verify Dataset Placement**
 Ensure that your raw data file, KDDTrain+.txt, is downloaded and placed directly inside your main project root directory alongside train.py.
 
-**🚀 Execution & Operational Guide**
+## 🚀 Execution & Operational Guide
 1. (Optional) Run the Notebook Visualizer
 To view data distributions, missing value matrices, or outlier boxplots, spin up your local Jupyter environment:
 
