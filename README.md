@@ -47,31 +47,31 @@ Follow these steps exactly to configure your environment and execute the project
 
 Open your Terminal (macOS/Linux) or Command Prompt/PowerShell (Windows) and move into your project root folder:
 
-cd path to your/project-folder
+    cd path to your/project-folder
 
 **Step 2: Establish a Virtual Environment (Recommended)**
 
 Creating an isolated virtual environment prevents dependencies from conflicting with other global software on your computer.
 
 # Create the virtual environment named 'nids_env'
-python -m venv nids_env
+    python -m venv nids_env
 
 # Activate the environment:
 
 # On Windows (Command Prompt):
-nids_env\Scripts\activate
+    nids_env\Scripts\activate
 # On Windows (PowerShell):
-.\nids_env\Scripts\Activate.ps1
+    .\nids_env\Scripts\Activate.ps1
 
 # On macOS / Linux:
-source nids_env/bin/activate
+    source nids_env/bin/activate
 
 **Step 3: Install All Project Dependencies**
 
 Ensure your requirements.txt is populated with pandas, numpy, scikit-learn, joblib, matplotlib, seaborn, notebook, and streamlit. Then run:
 
-pip install --upgrade pip
-pip install -r requirements.txt
+    pip install --upgrade pip
+    pip install -r requirements.txt
 
 **Step 4: Verify Dataset Placement**
 
@@ -81,7 +81,7 @@ Ensure that your raw data file, KDDTrain+.txt, is downloaded and placed directly
 1. (Optional) Run the Notebook Visualizer
 To view data distributions, missing value matrices, or outlier boxplots, spin up your local Jupyter environment:
 
-jupyter notebook
+        jupyter notebook
 
 Click on network analysis data.ipynb in the opened browser window and run the cells sequentially.
 
@@ -89,7 +89,7 @@ Click on network analysis data.ipynb in the opened browser window and run the ce
 
 To process the data pipeline, convert labels, and compile your AI models, type:
 
-python train.py
+        python train.py
 
 This will create the outputs/ folder and generate your nids_model.pkl and model_features.pkl files.
 
@@ -97,7 +97,7 @@ This will create the outputs/ folder and generate your nids_model.pkl and model_
 
 Once the training script is complete, launch the live network packet simulation dashboard using:
 
-streamlit run app.py
+    streamlit run app.py
 
 Streamlit will host the application locally and automatically open a tab in your default web browser (usually at http://localhost:8501).
 
